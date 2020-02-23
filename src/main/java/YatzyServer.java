@@ -29,7 +29,7 @@ public class YatzyServer {
         httpServer = new HttpServer(port);
         httpServer.setFileLocation("src/main/resources/yatzy-game");
         httpServer.addController("/api/players", new PlayerController(new PlayerDao(dataSource)));
-        httpServer.addController("/api/categories", new CategoryController( new CategoryDao(dataSource)));
+        httpServer.addController("/api/category", new CategoryController(new CategoryDao(dataSource)));
 
     }
 
