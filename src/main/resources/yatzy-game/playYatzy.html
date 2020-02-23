@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yatzy!</title>
+</head>
+<body>
+<form action="/api/category" method="post">
+    <label>
+        Dice:
+        <input type="text" name="diceList">
+    </label>
+
+    <label>
+        Category:
+        <select name="categoryName" id="category"></select>
+    </label>
+
+    <label>
+        Player:
+        <select name="playerName" id="players"></select>
+    </label>
+
+    <button>Submit</button>
+
+</form>
+
+<script>
+    const category = document.getElementById("category");
+    fetch("/api/category")
+        .then(function (result) {
+            return result.text();
+        })
+        .then(function (text) {
+            category.innerHTML = text;
+        });
+
+    const players = document.getElementById("players");
+    fetch("/api/players")
+        .then(function (result) {
+            return result.text();
+        })
+        .then(function (text) {
+            players.innerHTML = text;
+        });
+
+</script>
+</body>
+</html>
