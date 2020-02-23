@@ -1,4 +1,6 @@
 import no.kristiania.http.HttpServer;
+import no.kristiania.yatzygame.category.CategoryController;
+import no.kristiania.yatzygame.category.CategoryDao;
 import no.kristiania.yatzygame.player.PlayerController;
 import no.kristiania.yatzygame.player.PlayerDao;
 import org.flywaydb.core.Flyway;
@@ -27,6 +29,7 @@ public class YatzyServer {
         httpServer = new HttpServer(port);
         httpServer.setFileLocation("src/main/resources/yatzy-game");
         httpServer.addController("/api/players", new PlayerController(new PlayerDao(dataSource)));
+        httpServer.addController("/api/categories", new CategoryController( new CategoryDao(dataSource)));
 
     }
 
