@@ -122,11 +122,11 @@ body {
 * [x] Koden er sjekket inn på github.com/Westerdals-repository
 * [ ] GitHub repository er private, men delt med gruppen dere gjør gjensidig tilbakemelding til
 * [ ] Dere har mottatt og gitt minst 2 positive og 2 korrektive GitHub issues i github repository fra en annen gruppe
-* [ ] Dere har committed kode med begge prosjektdeltagernes GitHub konto (alternativt: README beskriver arbeidsform)
+* [x] Dere har committed kode med begge prosjektdeltagernes GitHub konto (alternativt: README beskriver arbeidsform)
 
 ### README.md
 
-* [ ] `README.md` inneholder en korrekt link til Travis CI
+* [x] `README.md` inneholder en korrekt link til Travis CI
 * [ ] `README.md` beskriver prosjektets funksjonalitet, hvordan man bygger det og hvordan man kjører det 
 * [ ] `README.md` beskriver eventuell ekstra leveranse utover minimum
 * [ ] `README.md` inneholder link til en diagram som viser datamodellen
@@ -134,30 +134,30 @@ body {
 
 ### Koden
 
-* [ ] `mvn package` bygger en executable jar-fil
+* [x] `mvn package` bygger en executable jar-fil
 * [ ] Koden inneholder et godt sett med tester
-* [ ] `java -jar target/...jar` (etter `mvn package`) lar bruker legge til og liste ut data fra databasen via webgrensesnitt
-* [ ] Programmet leser `dataSource.url`, `dataSource.username` og `dataSource.password` fra `pgr203.properties` for å connecte til databasen
-* [ ] Programmet bruker Flywaydb for å sette opp databaseskjema
-* [ ] Server skriver nyttige loggmeldinger, inkludert informasjon om hvilken URL den kjører på ved oppstart
+* [x] `java -jar target/...jar` (etter `mvn package`) lar bruker legge til og liste ut data fra databasen via webgrensesnitt
+* [x] Programmet leser `dataSource.url`, `dataSource.username` og `dataSource.password` fra `pgr203.properties` for å connecte til databasen
+* [x] Programmet bruker Flywaydb for å sette opp databaseskjema
+* [x] Server skriver nyttige loggmeldinger, inkludert informasjon om hvilken URL den kjører på ved oppstart
 
 ### Funksjonalitet
 
 * [ ] Programmet lar brukeren opprette nye spill
 * [ ] Programmet lar brukeren liste eksisterende spill
-* [ ] Programmet lar brukeren legge til spillere på et spill
-* [ ] Programmet lar brukeren velge hvilke kategorier som skal inngå i et spil
-* [ ] Programmet lar brukeren registrere kast på en kategori for en spiller
-* [ ] Programmer beregner poengscore for brukerne
+* [x] Programmet lar brukeren legge til spillere på et spill
+* [x] Programmet lar brukeren velge hvilke kategorier som skal inngå i et spil
+* [x] Programmet lar brukeren registrere kast på en kategori for en spiller
+* [x] Programmer beregner poengscore for brukerne
 
 ## Vedlegg: Mulighet for ekstrapoeng
 
-* [ ] Avansert datamodell (mer enn 3 tabeller)
+* [x] Avansert datamodell (mer enn 3 tabeller)
 * [ ] Avansert funksjonalitet (redigering av navn på spill, fjerning eller endring av spillere, definere nye kategorier, støtte for varianter av Yatzy som Maxi-Yatzy eller joker-terning)
 * [ ] Implementasjon av cookies for å konstruere sesjoner
 * [ ] UML diagram som dokumenterer datamodell og/eller arkitektur (presentert i README.md)
 * [ ] Rammeverk rundt Http-håndtering (AbstractHttpController eller en god HttpMessage class med HttpRequest og HttpResponse subtyper) som gjenspeiler RFC7230
-* [ ] God bruk av DAO-pattern
-* [ ] Korrekt håndtering av norske tegn i HTTP
+* [x] God bruk av DAO-pattern
+* [x] Korrekt håndtering av norske tegn i HTTP
 * [ ] Link til video med god demonstrasjon av ping-pong programmering
 * [ ] Annet

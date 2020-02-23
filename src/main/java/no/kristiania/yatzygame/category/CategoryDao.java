@@ -1,7 +1,6 @@
 package no.kristiania.yatzygame.category;
 
 import no.kristiania.yatzygame.AbstractDao;
-import no.kristiania.yatzygame.player.Player;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -10,7 +9,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+
 public class CategoryDao extends AbstractDao<Category> {
+
 
     public CategoryDao(DataSource dataSource) {
         super(dataSource);

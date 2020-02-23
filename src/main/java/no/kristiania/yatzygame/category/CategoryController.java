@@ -2,14 +2,12 @@ package no.kristiania.yatzygame.category;
 
 import no.kristiania.http.HttpController;
 import no.kristiania.http.HttpServer;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.io.OutputStream;
 import java.sql.SQLException;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class CategoryController implements HttpController {
@@ -22,15 +20,18 @@ public class CategoryController implements HttpController {
         this.categoryDao = categoryDao;
     }
 
-
     @Override
     public void handle(String requestAction, String requestPath, Map<String, String> query, String requestBody, OutputStream outputStream) throws IOException {
         try {
             if (requestAction.equals("POST")) {
                 query = HttpServer.parseQueryString(requestBody);
-                Category category = new Category();
-                category.setName(query.get("categoryName"));
-                categoryDao.insert(category);
+                String number = query.get("diceList");
+                //Regex used to allow input with comma and whitespace
+                List<Integer> lst = Arrays.stream(number.split("[\\\\s, ]+")).map(Integer::parseInt).collect(Collectors.toList());
+                for (int n:lst) {
+                    System.out.println(n);
+                }
+
                 outputStream.write(("HTTP/1.1 302 Redirect\r\n" +
                         "Location: http://localhost:8080/\r\n" +
                         "Connection: close\r\n" +
