@@ -30,17 +30,17 @@ kjør kommandoen`java -jar target/task-manager-1.0-SNAPSHOT.jar`
 
 ## Designbeskrivelse:
 
-### Client-Server-modell:
+### Client-Server-model:
 
-![Client-server-modell](diagram/Sekvens.png)
+![Client-server-model](diagram/Sekvens.png)
 
 Klienten spør etter en fil ved bruk av en `GET` forespørsel , der serveren kaller på en filkontroller som håndtere spørringen. Serveren sender da en response tilbake og klienten får tilbake fila som den ønsker.
 
 Da klienten sender ut en `POST` forespørsel så vil serveren kalle på en kontroller som skal håndtere parsing av query og dao vil kalle på en av funksjonene/metodene sine blant annet som `insert` som sender data inn til databasen.
 
-### Dao-modell:
+### Dao-model:
 
-![Dao-modell](diagram/DAO.png)
+![DAO-Model](diagram/Dao.png)
 
 Alle klassene som har arvet fra `AbstractDao` har sine egne resultset. Dette vil si at når vi skal prøve å lese fra databasen og det ved å kalle på `ListAll`, vil funksjonen/metoden `listAll` fra den `abstrakte` klassen bli kalt på og utføre en `SELECT` som da vil gi oss de korrekte tabellene tilbake.
 Akkurat nå så har bare ProjectDao full CRUD operasjoner.
