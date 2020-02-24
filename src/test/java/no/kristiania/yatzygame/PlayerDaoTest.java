@@ -58,7 +58,7 @@ public class PlayerDaoTest {
     }
 
     @Test
-    public void shouldBeEqual() throws SQLException {
+    public void shouldNotBeEqual() throws SQLException {
         Player playerOne = new Player();
         Player playerTwo = new Player();
 
@@ -68,8 +68,8 @@ public class PlayerDaoTest {
         playerTwo.setName("test");
         dao.insert(playerOne);
         dao.insert(playerTwo);
-        assertThat(playerOne).isEqualTo(playerTwo);
-        assertThat(playerOne.getId()).isEqualTo(playerTwo.getId());
+        assertThat(playerOne).isNotEqualTo(playerTwo);
+        assertThat(playerOne.getId()).isNotEqualTo(playerTwo.getId());
     }
 
     @Test

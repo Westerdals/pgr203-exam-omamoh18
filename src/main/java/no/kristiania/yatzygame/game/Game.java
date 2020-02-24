@@ -121,7 +121,7 @@ public class Game {
         switch (fetchCategory) {
             case "ONES":
                 categoryStringToInt = 1;
-                calculateForSingles(categoryStringToInt, lst);
+                score = calculateForSingles(categoryStringToInt, lst);
                 break;
             case "TWOS":
                 categoryStringToInt = 2;

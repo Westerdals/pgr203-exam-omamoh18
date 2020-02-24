@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game History</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Player</th>
+        <th>Dice Thrown</th>
+        <th>Category</th>
+        <th>Score</th>
+        <th>In session</th>
+        <tbody id="game"></tbody>
+    </tr>
+
+</table>
+
+
+<script>
+    var game = document.getElementById("game");
+    fetch("/api/game")
+        .then(function (result) {
+            return result.text();
+        })
+        .then(function (text) {
+            game.innerHTML = text;
+        });
+
+</script>
+</body>
+</html>

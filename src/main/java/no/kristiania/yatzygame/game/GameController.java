@@ -85,10 +85,9 @@ public class GameController implements HttpController {
     }
 
 
-
     public String getBody() throws SQLException {
         return gameDao.listAll().stream()
-                .map(p -> String.format("<option id='%s'>%s</option>", p.getId(), p.getDescription()))
+                .map(p -> String.format("<tr id=%s><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>", p.getId(), p.getPlayerName(), p.getDiceSequence(), p.getCategory(), p.getScore(), p.getSession()))
                 .collect(Collectors.joining(""));
     }
 }

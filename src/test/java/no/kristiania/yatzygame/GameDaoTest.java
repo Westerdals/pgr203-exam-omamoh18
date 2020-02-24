@@ -6,6 +6,7 @@ import org.flywaydb.core.Flyway;
 import org.h2.jdbcx.JdbcDataSource;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,10 +41,12 @@ public class GameDaoTest {
         game.setDiceSequence("1,2,5,4,2");
         game.setScore("4");
 
+        assertThat(gameDao.listAll()).doesNotContain(game);
+
         gameDao.insert(game);
 
         assertThat(gameDao.listAll())
-                .containsOnly(game);
+                .contains(game);
 
         gameDao.delete(game.getId());
 
