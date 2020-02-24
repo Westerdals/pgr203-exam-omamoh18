@@ -11,12 +11,12 @@
 
 ### Bygg og test executable jar-fil
 
-* First clone the project
-* run mvn `clean package`
-* add the `task-manager.properties file`
-* add `dataSource.url`
-* add `dataSource.username`
-* add `dataSource.password`
+* Først klone prosjektet
+* kjør mvn `clean package`
+* legg til `task-manager.properties file`
+* legg til `dataSource.url`
+* legg til `dataSource.username`
+* legg til `dataSource.password`
 ### Funksjonalitet
 
 Programmet er et Yatzi-spill der man kan: 
