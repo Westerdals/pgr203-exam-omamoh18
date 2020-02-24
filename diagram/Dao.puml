@@ -19,7 +19,7 @@ AbstractDao <|-- SessionDao
 AbstractDao <|-- GameDao
 
 Class GameDao<Game>
-Class PlayerDap<player>
+Class PlayerDao<player>
 Class CategoryDao<Category>
 Class SessionDao<Session>
 
