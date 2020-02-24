@@ -20,6 +20,10 @@
         Player:
         <select name="playerName" id="players"></select>
     </label>
+    <label>
+        Session:
+        <select name="sessionName" id="session"></select>
+    </label>
 
     <button>Submit</button>
 
@@ -42,6 +46,15 @@
         })
         .then(function (text) {
             players.innerHTML = text;
+        });
+
+    const session = document.getElementById("session");
+    fetch("/api/session")
+        .then(function (result) {
+            return result.text();
+        })
+        .then(function (text) {
+            session.innerHTML = text;
         });
 
 </script>

@@ -29,11 +29,8 @@ public class SessionController implements HttpController {
             if (requestAction.equals("POST")) {
 
                 query = HttpServer.parseQueryString(requestBody);
-
                 Session session = new Session();
-
                 session.setName(query.get("sessionName"));
-
                 sessionDao.insert(session);
 
                 outputStream.write(("HTTP/1.1 302 Redirect\r\n" +

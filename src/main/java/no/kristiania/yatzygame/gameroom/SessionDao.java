@@ -15,7 +15,7 @@ public class SessionDao extends AbstractDao<Session> {
     }
 
     public void insert(Session session) throws SQLException {
-        long id = insert(session, "insert into gamesession (name) values(?,?)");
+        long id = insert(session, "insert into gamesession (name) values(?)");
         session.setId(id);
     }
 
@@ -42,7 +42,7 @@ public class SessionDao extends AbstractDao<Session> {
     protected Session mapFromResultSet(ResultSet resultSet) throws SQLException {
         Session session = new Session();
         session.setId(resultSet.getLong("id"));
-        session.setName(resultSet.getString("session"));
+        session.setName(resultSet.getString("name"));
         return session;
     }
 

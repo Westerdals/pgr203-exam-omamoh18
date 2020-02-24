@@ -15,7 +15,7 @@ public class GameDao extends AbstractDao<Game> {
     }
 
     public void insert(Game game) throws SQLException {
-        long id = insert(game, "insert into game (player, category, dice, score) values(?,?,?,?)");
+        long id = insert(game, "insert into game (player, category, dice, score, session) values(?,?,?,?,?)");
         game.setId(id);
     }
 
@@ -43,6 +43,7 @@ public class GameDao extends AbstractDao<Game> {
         statement.setString(2, game.getCategory());
         statement.setString(3,game.getDiceSequence());
         statement.setString(4, game.getScore());
+        statement.setString(5, game.getSession());
 
     }
 
@@ -55,6 +56,7 @@ public class GameDao extends AbstractDao<Game> {
         game.setCategory(resultSet.getString("category"));
         game.setDiceSequence(resultSet.getString("dice"));
         game.setScore(resultSet.getString("score"));
+        game.setSession(resultSet.getString("session"));
         return game;
     }
 

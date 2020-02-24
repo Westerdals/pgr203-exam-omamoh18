@@ -45,6 +45,7 @@ public class GameController implements HttpController {
                 game.setPlayerName(query.get("playerName"));
                 game.setCategory(query.get("categoryName"));
                 game.setDiceSequence(query.get("diceList"));
+                game.setSession(query.get("sessionName"));
                 game.setScore(game.calculateScore(fetchCategory, lst));
 
                 gameDao.insert(game);
