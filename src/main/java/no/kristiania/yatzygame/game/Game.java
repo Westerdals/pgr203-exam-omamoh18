@@ -308,18 +308,5 @@ public class Game {
     }
 
 
-
-
-
-
-
-    /*
-    *
-    * ('ONE PAIR'),('TWO PAIRS'),
-                                     ('THREE OF A KIND'),('FOUR OF A KIND'),
-                                     ('SMALL STRAIGHT'),('LARGE STRAIGHT'),
-                                     ('FULL HOUSE'),('CHANCE'),
-                                     ('YATZY');
-    * */
 }
 

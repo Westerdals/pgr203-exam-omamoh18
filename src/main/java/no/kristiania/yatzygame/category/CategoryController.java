@@ -4,6 +4,7 @@ import no.kristiania.http.HttpController;
 import no.kristiania.http.HttpServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.sql.SQLException;
@@ -28,7 +29,7 @@ public class CategoryController implements HttpController {
                 String number = query.get("diceList");
                 //Regex used to allow input with comma and whitespace
                 List<Integer> lst = Arrays.stream(number.split("[\\\\s, ]+")).map(Integer::parseInt).collect(Collectors.toList());
-                for (int n:lst) {
+                for (int n : lst) {
                     System.out.println(n);
                 }
 

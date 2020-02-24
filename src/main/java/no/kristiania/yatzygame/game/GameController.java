@@ -35,11 +35,6 @@ public class GameController implements HttpController {
                 String dicelist = query.get("diceList");
                 //Regex used to allow input with comma and whitespace
                 List<Integer> lst = Arrays.stream(dicelist.split("[\\\\s, ]+")).map(Integer::parseInt).collect(Collectors.toList());
-                for (int n:
-                     lst) {
-                    System.out.println(n);
-                }
-
                 //Used for calculate score parameter
                 String fetchCategory = query.get("categoryName");
                 game.setPlayerName(query.get("playerName"));

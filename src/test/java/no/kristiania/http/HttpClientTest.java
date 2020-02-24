@@ -12,7 +12,7 @@ public class HttpClientTest {
     @Test
     void shouldExecuteRequests() throws IOException {
         HttpClientResponse response = makeEchoRequest("/echo");
-        assertEquals(response.getStatusCode(),200);
+        assertEquals(response.getStatusCode(), 200);
 
     }
 
@@ -24,7 +24,7 @@ public class HttpClientTest {
     }
 
     @Test
-    void shouldReturnHeaders() throws IOException{
+    void shouldReturnHeaders() throws IOException {
         HttpClientResponse response = makeEchoRequest("/echo?content-type=text/css");
         assertThat(response.getHeaders()).containsEntry("content-type", "text/css; charset=utf-8");
     }

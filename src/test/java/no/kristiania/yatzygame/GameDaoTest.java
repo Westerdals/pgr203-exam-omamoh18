@@ -158,7 +158,7 @@ public class GameDaoTest {
     }
 
     @Test
-    public void calculateScoreForPlayers() throws SQLException{
+    public void calculateScoreForPlayers() throws SQLException {
         Game game = new Game();
         List<Integer> lst = new ArrayList<>();
 
