@@ -5,6 +5,8 @@ import no.kristiania.yatzygame.category.CategoryController;
 import no.kristiania.yatzygame.category.CategoryDao;
 import no.kristiania.yatzygame.game.GameController;
 import no.kristiania.yatzygame.game.GameDao;
+import no.kristiania.yatzygame.gameroom.SessionController;
+import no.kristiania.yatzygame.gameroom.SessionDao;
 import no.kristiania.yatzygame.player.PlayerController;
 import no.kristiania.yatzygame.player.PlayerDao;
 import org.flywaydb.core.Flyway;
@@ -35,6 +37,7 @@ public class YatzyServer {
         httpServer.addController("/api/players", new PlayerController(new PlayerDao(dataSource)));
         httpServer.addController("/api/category", new CategoryController(new CategoryDao(dataSource)));
         httpServer.addController("/api/game", new GameController(new GameDao(dataSource)));
+        httpServer.addController("/api/session", new SessionController(new SessionDao(dataSource)));
     }
 
     public static void main(String[] args) throws IOException {
