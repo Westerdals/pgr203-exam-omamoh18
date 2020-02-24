@@ -1,0 +1,23 @@
+@startuml
+
+class Player{
+
+}
+
+class Session {
+
+}
+
+class Category {
+
+}
+
+Class Game {
+
+}
+
+
+Player -- Game
+Session -- Game
+Category -- Game
+@enduml

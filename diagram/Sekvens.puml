@@ -1,0 +1,31 @@
+@startuml
+
+
+
+Browser -> FileController : Get index.html
+
+activate FileController
+alt Found index.html
+FileController --> Browser : 200 OK
+else Failed
+
+FileController --> Browser : 404 Not found
+deactivate FileController
+end
+
+Browser -> HTTPController : POST /?playerName=Test
+activate HTTPController
+
+
+HTTPController -> playerDao : handle query
+deactivate HTTPController
+
+activate playerDao
+playerDao -> Database : call insert();
+deactivate playerDao
+
+Database -> Database : handle sql transaction
+Database --> playerDao
+playerDao --> HTTPController
+HTTPController --> Browser : 302 Redirect location: index.html
+@enduml
