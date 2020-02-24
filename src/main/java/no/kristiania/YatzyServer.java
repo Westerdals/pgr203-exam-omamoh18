@@ -18,10 +18,11 @@ import java.util.Properties;
 
 public class YatzyServer {
     private HttpServer httpServer;
-    public YatzyServer(int port) throws IOException{
+
+    public YatzyServer(int port) throws IOException {
 
         Properties properties = new Properties();
-        try(FileReader fileReader = new FileReader("pgr203.properties")){
+        try (FileReader fileReader = new FileReader("pgr203.properties")) {
             properties.load(fileReader);
         }
 
@@ -44,7 +45,7 @@ public class YatzyServer {
         new YatzyServer(8080).start();
     }
 
-    private void start(){
+    private void start() {
         httpServer.start();
     }
 

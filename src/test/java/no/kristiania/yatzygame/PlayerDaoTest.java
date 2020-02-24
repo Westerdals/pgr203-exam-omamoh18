@@ -7,6 +7,7 @@ import org.flywaydb.core.Flyway;
 import org.h2.jdbcx.JdbcDataSource;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import java.sql.SQLException;
 import java.util.Random;
 
@@ -18,7 +19,7 @@ public class PlayerDaoTest {
     private PlayerDao dao;
 
     @BeforeEach
-    void setUp(){
+    void setUp() {
         JdbcDataSource dataSource = createDataSource();
         dao = new PlayerDao(dataSource);
     }

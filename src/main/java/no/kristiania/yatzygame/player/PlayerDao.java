@@ -16,8 +16,8 @@ public class PlayerDao extends AbstractDao<Player> {
 
     @Override
     protected void mapToStatement(Player o, PreparedStatement statement) throws SQLException {
-       statement.setString(1, o.getName());
-       statement.setInt(2, o.getAge());
+        statement.setString(1, o.getName());
+        statement.setInt(2, o.getAge());
     }
 
     public void insert(Player player) throws SQLException {

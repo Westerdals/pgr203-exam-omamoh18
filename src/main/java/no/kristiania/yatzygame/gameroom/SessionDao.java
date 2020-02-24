@@ -49,7 +49,6 @@ public class SessionDao extends AbstractDao<Session> {
     }
 
 
-
     public Session retrieve(Long id, String sql) throws SQLException {
         try (Connection connection = dataSource.getConnection()) {
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {

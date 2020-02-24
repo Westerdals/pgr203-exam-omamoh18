@@ -41,7 +41,7 @@ public class GameDao extends AbstractDao<Game> {
     protected void mapToStatement(Game game, PreparedStatement statement) throws SQLException {
         statement.setString(1, game.getPlayerName());
         statement.setString(2, game.getCategory());
-        statement.setString(3,game.getDiceSequence());
+        statement.setString(3, game.getDiceSequence());
         statement.setString(4, game.getScore());
         statement.setString(5, game.getSession());
 
@@ -59,7 +59,6 @@ public class GameDao extends AbstractDao<Game> {
         game.setSession(resultSet.getString("session"));
         return game;
     }
-
 
 
     public Game retrieve(Long id, String sql) throws SQLException {

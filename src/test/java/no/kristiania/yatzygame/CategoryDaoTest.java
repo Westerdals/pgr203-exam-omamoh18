@@ -6,6 +6,7 @@ import org.flywaydb.core.Flyway;
 import org.h2.jdbcx.JdbcDataSource;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import java.sql.SQLException;
 import java.util.Random;
 
@@ -17,7 +18,7 @@ public class CategoryDaoTest {
     private CategoryDao dao;
 
     @BeforeEach
-    void setUp(){
+    void setUp() {
         JdbcDataSource dataSource = createDataSource();
         dao = new CategoryDao(dataSource);
     }
@@ -47,9 +48,9 @@ public class CategoryDaoTest {
                 .isEqualToComparingFieldByField(category);
     }
 
-    static Category sampleCategory(){
+    static Category sampleCategory() {
         Category category = new Category();
-        category.setName(pickOne(new String[] {"get categories", "ONES", "TWOS", "THREES","FOURS","FIVES","SIXES"}));
+        category.setName(pickOne(new String[]{"get categories", "ONES", "TWOS", "THREES", "FOURS", "FIVES", "SIXES"}));
         return category;
     }
 

@@ -135,7 +135,7 @@ body {
 ### Koden
 
 * [x] `mvn package` bygger en executable jar-fil
-* [ ] Koden inneholder et godt sett med tester
+* [x] Koden inneholder et godt sett med tester
 * [x] `java -jar target/...jar` (etter `mvn package`) lar bruker legge til og liste ut data fra databasen via webgrensesnitt
 * [x] Programmet leser `dataSource.url`, `dataSource.username` og `dataSource.password` fra `pgr203.properties` for å connecte til databasen
 * [x] Programmet bruker Flywaydb for å sette opp databaseskjema
@@ -143,8 +143,8 @@ body {
 
 ### Funksjonalitet
 
-* [ ] Programmet lar brukeren opprette nye spill
-* [ ] Programmet lar brukeren liste eksisterende spill
+* [x] Programmet lar brukeren opprette nye spill
+* [x] Programmet lar brukeren liste eksisterende spill
 * [x] Programmet lar brukeren legge til spillere på et spill
 * [x] Programmet lar brukeren velge hvilke kategorier som skal inngå i et spil
 * [x] Programmet lar brukeren registrere kast på en kategori for en spiller
@@ -153,7 +153,7 @@ body {
 ## Vedlegg: Mulighet for ekstrapoeng
 
 * [x] Avansert datamodell (mer enn 3 tabeller)
-* [ ] Avansert funksjonalitet (redigering av navn på spill, fjerning eller endring av spillere, definere nye kategorier, støtte for varianter av Yatzy som Maxi-Yatzy eller joker-terning)
+* [x] Avansert funksjonalitet (redigering av navn på spill, fjerning eller endring av spillere, definere nye kategorier, støtte for varianter av Yatzy som Maxi-Yatzy eller joker-terning)
 * [ ] Implementasjon av cookies for å konstruere sesjoner
 * [ ] UML diagram som dokumenterer datamodell og/eller arkitektur (presentert i README.md)
 * [ ] Rammeverk rundt Http-håndtering (AbstractHttpController eller en god HttpMessage class med HttpRequest og HttpResponse subtyper) som gjenspeiler RFC7230
