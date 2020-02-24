@@ -3,7 +3,6 @@ package no.kristiania.yatzygame.game;
 import no.kristiania.http.HttpController;
 import no.kristiania.http.HttpServer;
 import no.kristiania.yatzygame.category.CategoryController;
-import no.kristiania.yatzygame.category.CategoryDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,7 +35,6 @@ public class GameController implements HttpController {
                 String dicelist = query.get("diceList");
                 //Regex used to allow input with comma and whitespace
                 List<Integer> lst = Arrays.stream(dicelist.split("[\\\\s, ]+")).map(Integer::parseInt).collect(Collectors.toList());
-
                 for (int n:
                      lst) {
                     System.out.println(n);

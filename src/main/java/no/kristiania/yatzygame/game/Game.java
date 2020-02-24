@@ -9,10 +9,10 @@ public class Game {
 
     private Long id;
     private String description;
-    private Date date;
-    private String  score;
+    private String date;
     private String playerName;
     private String category;
+    private String score;
 
     public String getDiceSequence() {
         return diceSequence;
@@ -40,11 +40,11 @@ public class Game {
         this.description = description;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -77,7 +77,7 @@ public class Game {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Game game = (Game) o;
-        return Objects.equals(id, game.id) &&
+        return
                 Objects.equals(description, game.description) &&
                 Objects.equals(date, game.date) &&
                 Objects.equals(score, game.score) &&
@@ -88,12 +88,12 @@ public class Game {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, description, date, score, playerName, category, diceSequence);
+        return Objects.hash( description, date, score, playerName, category, diceSequence);
     }
 
     @Override
     public String toString() {
-        return "Game{" +
+        return "{Game" +
                 "id=" + id +
                 ", description='" + description + '\'' +
                 ", date=" + date +

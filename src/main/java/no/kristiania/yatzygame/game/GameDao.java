@@ -19,8 +19,14 @@ public class GameDao extends AbstractDao<Game> {
         game.setId(id);
     }
 
-    public void update(Long id, String status) throws SQLException {
-        update(status, id, "update game set description = ? where id = ?");
+    public void update(Long id, String description) throws SQLException {
+        update(description, id, "update game set description = ? where id = ?");
+
+    }
+
+    public void updatePlayerName(Long id, String playerName) throws SQLException {
+        update(playerName, id, "update game set player = ? where id = ?");
+
     }
 
     public Game retrieve(Long id) throws SQLException {
