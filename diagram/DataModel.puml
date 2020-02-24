@@ -1,0 +1,33 @@
+@startuml
+
+class Player {
+    -id
+    -name
+    -age
+}
+
+class Game{
+
+    -id
+    -description
+    -date
+    -playerName
+    -category
+    -score
+}
+
+class category {
+    -id
+    -name
+}
+
+class Session {
+    -id
+    -name
+    -description
+}
+
+Player "*"-  Game
+Session - Game
+category - "1"Game
+@enduml

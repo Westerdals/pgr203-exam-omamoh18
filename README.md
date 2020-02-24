@@ -3,6 +3,9 @@
 [![Build Status](https://travis-ci.com/Westerdals/pgr203-2019-konteeeksamen-omamoh18.svg?token=yMbNk68jXyaqW9Hmq6pJ&branch=master)](https://travis-ci.com/Westerdals/pgr203-2019-konteeeksamen-omamoh18)
 
 
+* Rahil vaseer
+
+* Mohammed Omar
 
 ## Hvordan kjøre dette programmet
 
@@ -45,12 +48,8 @@ Vi synes at logikken for spillet er godt implementert, kunne ha blitt bedre ette
 Vi har gjort mye annerledes fra i fjor så vi kan si at vi har fått vår dose kunnskap, men hvem sier at man ikke kan lære mer? 
 Derfor kan det legges fram at vi kunne ha vært flinkere til å refaktorere, legge en større plan for kodingen i seg selv. Vi hadde store planer, men var redde for å ende opp med lite tid og derfor kan planlegning til neste eksamen være bedre. Vi fikk ikke tid til full CRUD mekanismen gjennom gui’en, vi har det i selve koden og det fungerer til en god grad, men skulle ønske vi hadde mer tid for å kunne få implementert det.
 Vi har mer forståelse av hva dette faget gikk ut enn sist gang, sist var sjokket av å se en test for første gang overveldende, men nå kan vi ikke se for oss ett prosjekt uten å skrive tester. 
-
+Den vi skulle lage isssues for sa til oss at han ikke skulle levere eksamen. 
  
-
-
-
-
 
 
 

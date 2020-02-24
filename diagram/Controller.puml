@@ -1,0 +1,12 @@
+@startuml
+
+package no.kristiania.http {
+    Interface HttpController {
+        handle():void
+    }
+
+    Class FileHttpController implements HttpController
+    Class EchoHttpController implements HttpController
+}
+
+@enduml

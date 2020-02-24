@@ -1,0 +1,27 @@
+@startuml
+
+
+Abstract AbstractDao<ENTITY> {
+    #DataSource dataSource
+    +AbstractDao : dataSource
+    +insert(object:ENTITY sql:String):long
+    +update(field:String id:Long sql:String):void
+    +delete(id:Long sql:String):void
+    {abstract}#maptoStatement(o:ENTITY statement:PreparedStatement):void
+    +listAll(sql:String):List<ENTITY>
+    {abstract}#mapFromResultSet(resultSet:ResultSet):void
+    +retrieve(id:Long sql:String):ENTITY
+}
+
+AbstractDao <|-- PlayerDao
+AbstractDao <|-- CategoryDao
+AbstractDao <|-- SessionDao
+AbstractDao <|-- GameDao
+
+Class GameDao<Game>
+Class PlayerDap<player>
+Class CategoryDao<Category>
+Class SessionDao<Session>
+
+
+@enduml
