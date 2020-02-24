@@ -32,7 +32,7 @@ public class GameControllerTest {
 
 
     @Test
-    void shouldReturnProjectFromDb() throws SQLException {
+    void shouldReturnGameFromDb() throws SQLException {
         Game gameOne = new Game();
         Game gameTwo = new Game();
 
