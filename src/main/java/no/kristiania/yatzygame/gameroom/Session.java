@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Session {
 
     private String name;
+    private String description;
     private Long id;
 
     public String getName() {
@@ -21,6 +22,14 @@ public class Session {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override

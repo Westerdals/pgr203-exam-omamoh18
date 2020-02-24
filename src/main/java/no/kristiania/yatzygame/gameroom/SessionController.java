@@ -5,11 +5,10 @@ import no.kristiania.http.HttpServer;
 import no.kristiania.yatzygame.category.CategoryController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.sql.SQLException;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -31,6 +30,7 @@ public class SessionController implements HttpController {
                 query = HttpServer.parseQueryString(requestBody);
                 Session session = new Session();
                 session.setName(query.get("sessionName"));
+                session.setDescription(query.get("sessionDescription"));
                 sessionDao.insert(session);
 
                 outputStream.write(("HTTP/1.1 302 Redirect\r\n" +

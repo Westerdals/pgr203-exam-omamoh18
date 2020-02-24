@@ -51,7 +51,7 @@ public class GameController implements HttpController {
                 gameDao.insert(game);
 
                 outputStream.write(("HTTP/1.1 302 Redirect\r\n" +
-                        "Location: http://localhost:8080/\r\n" +
+                        "Location: http://localhost:8080/playYatzy.html/\r\n" +
                         "Connection: close\r\n" +
                         "\r\n").getBytes());
                 return;
