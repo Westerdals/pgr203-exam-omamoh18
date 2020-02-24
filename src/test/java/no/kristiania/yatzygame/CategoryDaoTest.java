@@ -24,7 +24,7 @@ public class CategoryDaoTest {
 
     static JdbcDataSource createDataSource() {
         JdbcDataSource dataSource = new JdbcDataSource();
-        dataSource.setUrl("jdbc:h2:mem:categoryTest;DB_CLOSE_DELAY=-1");
+        dataSource.setUrl("jdbc:h2:mem:yatzyGameTest;DB_CLOSE_DELAY=-1");
         Flyway.configure().dataSource(dataSource).load().migrate();
         return dataSource;
     }
