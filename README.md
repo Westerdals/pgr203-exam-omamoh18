@@ -16,7 +16,7 @@
 * legg til `dataSource.username`
 * legg til `dataSource.password`
 * For å starte programmet 
-kjør kommandoen`java -jar target/task-manager-1.0-SNAPSHOT.jar`
+kjør kommandoen`java -jar target/yatzy-game-1.0-SNAPSHOT.jar` i terminalen
 
 ### Funksjonalitet
 
@@ -43,7 +43,6 @@ Da klienten sender ut en `POST` forespørsel så vil serveren kalle på en kontr
 ![DAO-Model](diagram/Dao.png)
 
 Alle klassene som har arvet fra `AbstractDao` har sine egne resultset. Dette vil si at når vi skal prøve å lese fra databasen og det ved å kalle på `ListAll`, vil funksjonen/metoden `listAll` fra den `abstrakte` klassen bli kalt på og utføre en `SELECT` som da vil gi oss de korrekte tabellene tilbake.
-Akkurat nå så har bare ProjectDao full CRUD operasjoner.
 
 ![Data-Model](diagram/DataModel.png)
 
